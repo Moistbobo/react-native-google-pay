@@ -181,8 +181,11 @@ public class RNGooglePayModule extends ReactContextBaseJavaModule {
       // token will only consist of "examplePaymentMethodToken".
 
       // Logging token string.
-      String token = paymentMethodData.getJSONObject("tokenizationData").getString("token");
-      requestPaymentPromise.resolve(token);
+      //       String token = paymentMethodData.getJSONObject("tokenizationData").getString("token");
+      //       requestPaymentPromise.resolve(token);
+      
+      // Return entire payment object
+      requestPaymentPromise.resolve(paymentMethodData.toString());
     } catch (JSONException e) {
       Log.e(TAG, "[GooglePay] handlePaymentSuccess error: " + e.toString());
       return;
