@@ -12,6 +12,10 @@ Accept Payments with Google Pay for React Native apps.
 
 ---
 
+## Fork details
+
+This fork changes the module to return the entire `paymentMethodData` object instead of just the payment token, as some payment providers require payment method to be supplied with the payment request.
+
 ## Versions
 
 | 1.x              | 2.x              |
